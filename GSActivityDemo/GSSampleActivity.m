@@ -35,6 +35,7 @@
 - (UIViewController *)activityViewController {
     GSSampleActivityViewController *vc = [[GSSampleActivityViewController alloc] initWithNibName:nil bundle:nil];
     vc.delegate = self;
+    vc.modalPresentationStyle = UIModalPresentationFormSheet;
     return vc;
 }
 
