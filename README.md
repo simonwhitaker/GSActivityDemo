@@ -5,4 +5,4 @@ This simple Xcode 4 project demonstrates the problem referred to in the followin
 
 When you tap the **Tap me!** button in the initial activity popover the subsequent view controller should, according to the [UIActivity class reference](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIActivity_Class/Reference/Reference.html) appear in a popover. However, it doesn't -- it is presented modally. 
 
-In addition, calling `activityDidFinish:` (by tapping the **I should dismiss this view** button) does not dismiss the view controller. Again, this appears to be contrary to the documented behaviour.
+<strike>In addition, calling `activityDidFinish:` (by tapping the **I should dismiss this view** button) does not dismiss the view controller. Again, this appears to be contrary to the documented behaviour.</strike> Resolved in commit 87997da.
