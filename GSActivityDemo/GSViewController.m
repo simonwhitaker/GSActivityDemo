@@ -34,6 +34,9 @@
         
         UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:activityItems
                                                                          applicationActivities:applicationActivities];
+        vc.completionHandler = ^(NSString *activityType, BOOL completed){
+            [self.activityPopoverController dismissPopoverAnimated:YES];
+        };
         
         self.activityPopoverController = [[UIPopoverController alloc] initWithContentViewController:vc];
         [self.activityPopoverController presentPopoverFromRect:[(UIControl *)sender frame]
