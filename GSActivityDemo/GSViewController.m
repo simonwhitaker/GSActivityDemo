@@ -38,7 +38,12 @@
             [self.activityPopoverController dismissPopoverAnimated:YES];
         };
         
-        self.activityPopoverController = [[UIPopoverController alloc] initWithContentViewController:vc];
+        if (self.activityPopoverController) {
+            [self.activityPopoverController setContentViewController:vc];
+        } else {
+            self.activityPopoverController = [[UIPopoverController alloc] initWithContentViewController:vc];
+        }
+
         [self.activityPopoverController presentPopoverFromRect:[(UIControl *)sender frame]
                                                         inView:self.view
                                       permittedArrowDirections:UIPopoverArrowDirectionAny
